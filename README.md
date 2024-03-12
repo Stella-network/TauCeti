@@ -15,7 +15,7 @@ docker-compose -f TauCeti/docker/docker-compose.dev.yml up -d --build
 <br>
 <br>
 
-<h3>2, Laravelの.envを設定します。</h3>
+<h3>2, Laravelの設定</h3>
 
 まず、下記のコマンドを実行して.envファイルを生成します。
 
@@ -32,6 +32,12 @@ DB_PORT=3306
 DB_DATABASE=tau_ceti_db
 DB_USERNAME=root
 DB_PASSWORD=tau_ceti_pass
+```
+
+APPキーを生成する
+
+```
+docker exec -it tau_ceti_app php artisan key:generate
 ```
 
 <br>
@@ -81,8 +87,5 @@ docker exec -it tau_ceti_app npm run dev
 ```
 localhost:8080
 ```
-
-(*)もしこの画面でエラーが出た時、generateKeyみたいなことが書いてる緑のボタンがあれば、それを押せばOK
-
 <br>
 <br>
