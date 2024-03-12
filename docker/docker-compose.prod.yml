@@ -1,0 +1,33 @@
+# @todo 本番設定はこれでいいか確認して適宜修正する
+# docker-compose.yml
+version: '3'
+services:
+  app:
+    container_name: tp_app
+    build:
+      context: ./services/app_prod
+    volumes:
+      - ../project:/var/www
+    depends_on:
+      - db
+  server:
+    container_name: tp_server
+    build:
+      context: ./services/server_prod
+    volumes:
+      - ../project:/var/www
+    ports:
+      - 8080:80
+    depends_on:
+      - app
+  db:
+    container_name: tp_db
+    build:
+      context: ./services/db
+    volumes:
+      # MySQLの設定ファイル
+      - ./services/db/my.cnf:/etc/mysql/conf.d/my.cnf
+      # データの永続化
+      - ./strage/db_data/:/var/lib/mysql
+      # ダンプデータのマウント用
+      - ./strage/dump/:/var/dump/
