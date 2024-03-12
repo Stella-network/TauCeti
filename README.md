@@ -43,6 +43,9 @@ DB_PASSWORD=tau_ceti_pass
 docker exec -it tau_ceti_app composer install
 ```
 
+<br>
+<br>
+
 <h3>4, 下記コマンドでマイグレーションを実行</h3>
 
 ```
@@ -58,6 +61,9 @@ docker exec -it tau_ceti_app php artisan migrate
 docker exec -it tau_ceti_app npm install
 docker exec -it tau_ceti_app npm install --save-dev vue @vitejs/plugin-vue
 ```
+
+<br>
+<br>
 
 <h3>6, 下記コマンドでVueを起動</h3>
 
