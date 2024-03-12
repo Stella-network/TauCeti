@@ -11,6 +11,9 @@ services:
     ports:
       - 8000:8000
       - 9000:9000
+      - 5173:5173
+    expose:
+      - 5173
     networks:
       - tau_ceti_network
   server:
