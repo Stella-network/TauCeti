@@ -9,7 +9,7 @@
 まずはcloneしてこのリポジトリを任意のディレクトリに引っ張ってください。
 
 ```
-git clone https://github.com/Stella-network/TauCeti?tab=readme-ov-file#%E8%B5%B7%E5%8B%95%E6%96%B9%E6%B3%95
+git clone https://github.com/Stella-network/TauCeti
 ```
 
 このリポジトリをcloneしたディレクトリで下記のコマンドを実行します。
