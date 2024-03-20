@@ -40,12 +40,6 @@ DB_USERNAME=root
 DB_PASSWORD=tau_ceti_pass
 ```
 
-APPキーを生成する
-
-```
-docker exec -it tau_ceti_app php artisan key:generate
-```
-
 <br>
 <br>
 
@@ -53,6 +47,7 @@ docker exec -it tau_ceti_app php artisan key:generate
 
 ```
 docker exec -it tau_ceti_app composer install
+docker exec -it tau_ceti_app composer update
 ```
 
 <br>
@@ -77,8 +72,15 @@ docker exec -it tau_ceti_app npm install --save-dev vue @vitejs/plugin-vue
 <br>
 <br>
 
-<h3>6, 下記コマンドでVueを起動</h3>
+<h3>6, 下記コマンドでAppキーを生成してVueを起動</h3>
 
+APPキーを生成する
+
+```
+docker exec -it tau_ceti_app php artisan key:generate
+```
+
+Vueを起動
 ```
 docker exec -it tau_ceti_app npm run dev
 ```
