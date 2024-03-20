@@ -69,6 +69,12 @@ docker exec -it tau_ceti_app npm install
 docker exec -it tau_ceti_app npm install --save-dev vue @vitejs/plugin-vue
 ```
 
+Viteをビルドする
+```
+docker exec -it tau_ceti_app npm run build
+```
+
+
 <br>
 <br>
 
